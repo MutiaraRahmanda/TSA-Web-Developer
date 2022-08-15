@@ -1,0 +1,82 @@
+* {
+    font-family: 'Red Hat Display';
+}
+
+.benefit-section {
+    background: url('../img/bg.jpg');
+    width: 100%;
+    background-size: cover;
+}
+
+.nav-link{
+    display: block;
+    text-align: center;
+    padding: 16px 18px;
+}
+
+.nav-link:hover{
+     font-weight: 900;
+}
+
+.container-fluid {
+    padding-top: 5px;
+    height: 100%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    line-height: 1.75rem
+}
+
+.bg-light {
+    background-color: rgba(253, 215, 170, 0.46)!important;
+}
+
+.footer {
+    background-color: rgba(253, 215, 170, 0.46);
+    padding-top: 5px;
+    height: 100%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    line-height: 1.75rem
+}
+
+ul.benefit > li {
+	padding-left: 36px;
+    margin-bottom: 20px;
+	list-style: none;
+	background-image: url("../img/check-mark.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 20px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.features {
+    margin: 4em auto;
+    padding: 1em;
+    position: relative;
+}
+
+.features img {
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
+}
+.hero-section {
+    text-align: center;
+    background-image: url('../img/bg_1.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    padding: 50px;
+    padding-top: 160px;
+    position: relative;
+
+}
