@@ -24,14 +24,15 @@
     />
 
     <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/flaticon/font/flaticon.css') }}" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+
   </head>
 
   <body>
@@ -61,11 +62,11 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link active">About</a>
-            <a href="class.html" class="nav-item nav-link">Classes</a>
-            <a href="team.html" class="nav-item nav-link">Teachers</a>
-            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
+            <a href="{{ url('about') }}" class="nav-item nav-link">About</a>
+            <a href="{{ url('class') }}"class="nav-item nav-link">Classes</a>
+            <a href="{{ url('team') }}" class="nav-item nav-link">Teachers</a>
+            <a href="{{ url('gallery') }}"class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
               <a
                 href="#"
@@ -74,11 +75,11 @@
                 >Pages</a
               >
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                <a href="single.html" class="dropdown-item">Blog Detail</a>
+               <a href="{{ url('blog') }}" class="dropdown-item">Blog Grid</a>
+                <a href="{{ url('single') }}" class="dropdown-item">Blog Detail</a>
               </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a href="{{ url('contact') }}" class="nav-item nav-link">Contact</a>
           </div>
           <a href="" class="btn btn-primary px-4">Join Class</a>
         </div>
