@@ -23,15 +23,15 @@
       rel="stylesheet"
     />
 
-    <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+   <!-- Flaticon Font -->
+    <link href="{{ asset('assets/lib/flaticon/font/flaticon.css') }}" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
   </head>
 
   <body>
@@ -61,11 +61,11 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="class.html" class="nav-item nav-link">Classes</a>
-            <a href="team.html" class="nav-item nav-link">Teachers</a>
-            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
+            <a href="{{ url('about') }}" class="nav-item nav-link">About</a>
+            <a href="{{ url('class') }}"class="nav-item nav-link">Classes</a>
+            <a href="{{ url('team') }}" class="nav-item nav-link">Teachers</a>
+            <a href="{{ url('gallery') }}"class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
               <a
                 href="#"
@@ -74,11 +74,11 @@
                 >Pages</a
               >
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                <a href="{{ url('blog') }}"class="dropdown-item">Blog Grid</a>
+                <a href="{{ url('single') }}" class="dropdown-item">Blog Detail</a>
               </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a href="{{ url('contact') }}" class="nav-item nav-link">Contact</a>
           </div>
           <a href="" class="btn btn-primary px-4">Join Class</a>
         </div>
@@ -114,7 +114,7 @@
         <div class="row pb-3">
           <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow-sm mb-2">
-              <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+              <img class="card-img-top mb-2" src="assets/img/blog-1.jpg" alt="" />
               <div class="card-body bg-light text-center p-4">
                 <h4 class="">Diam amet eos at no eos</h4>
                 <div class="d-flex justify-content-center mb-3">
@@ -141,7 +141,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow-sm mb-2">
-              <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
+              <img class="card-img-top mb-2" src="assets/img/blog-2.jpg" alt="" />
               <div class="card-body bg-light text-center p-4">
                 <h4 class="">Diam amet eos at no eos</h4>
                 <div class="d-flex justify-content-center mb-3">
@@ -168,7 +168,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow-sm mb-2">
-              <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="" />
+              <img class="card-img-top mb-2" src="assets/img/blog-3.jpg" alt="" />
               <div class="card-body bg-light text-center p-4">
                 <h4 class="">Diam amet eos at no eos</h4>
                 <div class="d-flex justify-content-center mb-3">
@@ -195,7 +195,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow-sm mb-2">
-              <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+              <img class="card-img-top mb-2" src="assets/img/blog-1.jpg" alt="" />
               <div class="card-body bg-light text-center p-4">
                 <h4 class="">Diam amet eos at no eos</h4>
                 <div class="d-flex justify-content-center mb-3">
@@ -222,7 +222,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow-sm mb-2">
-              <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
+              <img class="card-img-top mb-2" src="assets/img/blog-2.jpg" alt="" />
               <div class="card-body bg-light text-center p-4">
                 <h4 class="">Diam amet eos at no eos</h4>
                 <div class="d-flex justify-content-center mb-3">
@@ -249,7 +249,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow-sm mb-2">
-              <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="" />
+              <img class="card-img-top mb-2" src="assets/img/blog-3.jpg" alt="" />
               <div class="card-body bg-light text-center p-4">
                 <h4 class="">Diam amet eos at no eos</h4>
                 <div class="d-flex justify-content-center mb-3">
@@ -454,16 +454,16 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/lightbox/js/lightbox.min.js') }}"></script>
 
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
   </body>
 </html>

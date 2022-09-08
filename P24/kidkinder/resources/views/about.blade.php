@@ -75,7 +75,7 @@
                 >Pages</a
               >
               <div class="dropdown-menu rounded-0 m-0">
-               <a href="{{ url('blog') }}" class="dropdown-item">Blog Grid</a>
+                <a href="{{ url('blog') }}" class="dropdown-item">Blog Grid</a>
                 <a href="{{ url('single') }}" class="dropdown-item">Blog Detail</a>
               </div>
             </div>
@@ -110,7 +110,7 @@
           <div class="col-lg-5">
             <img
               class="img-fluid rounded mb-5 mb-lg-0"
-              src="img/about-1.jpg"
+              src="assets/img/about-1.jpg"
               alt=""
             />
           </div>
@@ -127,7 +127,7 @@
             </p>
             <div class="row pt-2 pb-4">
               <div class="col-6 col-md-4">
-                <img class="img-fluid rounded" src="img/about-2.jpg" alt="" />
+                <img class="img-fluid rounded" src="assets/img/about-2.jpg" alt="" />
               </div>
               <div class="col-6 col-md-8">
                 <ul class="list-inline m-0">
@@ -279,7 +279,7 @@
               class="position-relative overflow-hidden mb-4"
               style="border-radius: 100%"
             >
-              <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
+              <img class="img-fluid w-100" src="assets/img/team-1.jpg" alt="" />
               <div
                 class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute"
               >
@@ -311,7 +311,7 @@
               class="position-relative overflow-hidden mb-4"
               style="border-radius: 100%"
             >
-              <img class="img-fluid w-100" src="img/team-2.jpg" alt="" />
+              <img class="img-fluid w-100" src="assets/img/team-2.jpg" alt="" />
               <div
                 class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute"
               >
@@ -343,7 +343,7 @@
               class="position-relative overflow-hidden mb-4"
               style="border-radius: 100%"
             >
-              <img class="img-fluid w-100" src="img/team-3.jpg" alt="" />
+              <img class="img-fluid w-100" src="assets/img/team-3.jpg" alt="" />
               <div
                 class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute"
               >
@@ -375,7 +375,7 @@
               class="position-relative overflow-hidden mb-4"
               style="border-radius: 100%"
             >
-              <img class="img-fluid w-100" src="img/team-4.jpg" alt="" />
+              <img class="img-fluid w-100" src="assets/img/team-4.jpg" alt="" />
               <div
                 class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute"
               >
@@ -559,16 +559,16 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/lightbox/js/lightbox.min.js') }}"></script>
 
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
   </body>
 </html>
