@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Kelas extends Model
 {
     use HasFactory;
+    public static function index(){
+        return Kelas::orderBy('image')->get();
+        return Kelas::all();
+    }
 }

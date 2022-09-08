@@ -1,13 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Kid;
+use App\Models\Kelas;
+use App\Models\Picture;
 
 use Illuminate\Http\Request;
 
 class KidController extends Controller
 {
     public function index(){
-        return view('index');
+        return view('index', ['kids' => Kid::kids(), 'pictures' => Picture::index(), 'kelas' => Kelas::index('image')]);
+
     }
 
     public function about(){

@@ -290,6 +290,46 @@
               <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
             </div>
           </div>
+          @foreach ($kelas as $p)
+          <div class="col-lg-4 mb-5">
+            <div class="card border-0 bg-light shadow-sm pb-2">
+              <img class="card-img-top mb-2" src={{($p ->image)}} alt="" />
+              <div class="card-body text-center">
+                <h4 class="card-title">{{($p ->title)}}</h4>
+                <p class="card-text">
+                 {{($p ->description)}}
+                </p>
+              </div>
+              <div class="card-footer bg-transparent py-4 px-5">
+                <div class="row border-bottom">
+                  <div class="col-6 py-1 text-right border-right">
+                    <strong>Age of Kids</strong>
+                  </div>
+                  <div class="col-6 py-1">3 - 6 Years</div>
+                </div>
+                <div class="row border-bottom">
+                  <div class="col-6 py-1 text-right border-right">
+                    <strong>Total Seats</strong>
+                  </div>
+                  <div class="col-6 py-1">40 Seats</div>
+                </div>
+                <div class="row border-bottom">
+                  <div class="col-6 py-1 text-right border-right">
+                    <strong>Class Time</strong>
+                  </div>
+                  <div class="col-6 py-1">08:00 - 10:00</div>
+                </div>
+                <div class="row">
+                  <div class="col-6 py-1 text-right border-right">
+                    <strong>Tution Fee</strong>
+                  </div>
+                  <div class="col-6 py-1">$290 / Month</div>
+                </div>
+              </div>
+              <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+            </div>
+          </div>
+          @endforeach
         </div>
       </div>
     </div>
@@ -515,6 +555,74 @@
             <h4>Donald John</h4>
             <i>Art Teacher</i>
           </div>
+          @foreach ($kids as $kid)
+          <div class="col-md-6 col-lg-3 text-center team mb-5">
+            <div
+              class="position-relative overflow-hidden mb-4"
+              style="border-radius: 100%"
+            >
+              <img class="img-fluid w-100" src="assets/img/rara.jpg" alt="" />
+              <div
+                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute"
+              >
+                <a
+                  class="btn btn-outline-light text-center mr-2 px-0"
+                  style="width: 38px; height: 38px"
+                  href="#"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light text-center mr-2 px-0"
+                  style="width: 38px; height: 38px"
+                  href="#"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light text-center px-0"
+                  style="width: 38px; height: 38px"
+                  href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <h4>{{($kid ->nama)}}</h4>
+            <i>{{($kid ->guru)}}</i>
+          </div>
+          @endforeach
+          @foreach ($pictures as $item)
+          <div class="col-md-6 col-lg-3 text-center team mb-5">
+            <div
+              class="position-relative overflow-hidden mb-4"
+              style="border-radius: 100%"
+            >
+              <img class="img-fluid w-100" src={{($item ->image)}} alt="" />
+              <div
+                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute"
+              >
+                <a
+                  class="btn btn-outline-light text-center mr-2 px-0"
+                  style="width: 38px; height: 38px"
+                  href="#"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light text-center mr-2 px-0"
+                  style="width: 38px; height: 38px"
+                  href="#"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light text-center px-0"
+                  style="width: 38px; height: 38px"
+                  href="#"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <h4>{{($item ->nama)}}</h4>
+            <i>{{($item ->guru)}}</i>
+          </div>
+          @endforeach
         </div>
       </div>
     </div>

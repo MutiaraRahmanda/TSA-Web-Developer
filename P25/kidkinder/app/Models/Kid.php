@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kid extends Model
 {
     use HasFactory;
+    public static function kids(){
+        return Kid::all();
+    }
 }
