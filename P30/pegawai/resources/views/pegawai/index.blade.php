@@ -75,6 +75,7 @@
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>
+            <a class="btn btn-warning" href="{{ route('pegawai.showGaji', $pgw->id) }}">Gaji</a>
         </form>
         </td>
         </tr>

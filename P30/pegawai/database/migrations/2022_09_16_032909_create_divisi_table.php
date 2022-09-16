@@ -15,7 +15,10 @@ class CreateDivisiTable extends Migration
     {
         Schema::create('divisi', function (Blueprint $table) {
             $table->id();
-            $table->string('divisi', 20);
+            $table->string('nama_divisi', 20);
+            $table->integer('kehadiran');
+            $table->string('rekening', 20);
+            $table->string('gaji', 20);
             $table->timestamps();
         });
     }

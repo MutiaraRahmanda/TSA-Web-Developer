@@ -15,10 +15,19 @@ class DivisiSeeder extends Seeder
     public function run()
     {
         $divisi = [
-            ['divisi' => 'IT',],
-            ['divisi' => 'Creative',],
-            ['divisi' => 'HRD',],
-            ['divisi' => 'Marketing'],
+            [
+                'nama_divisi' => 'IT',
+                'kehadiran' => 30,
+                'rekening' => '354354657',
+                'gaji' => '2.500.000',
+            ],
+            [
+                'nama_divisi' => 'Creative',
+                'kehadiran' => 30,
+                'rekening' => '354355678',
+                'gaji' => '2.000.000',
+            ],
+
         ];
 
         DB::table('divisi')->insert($divisi);

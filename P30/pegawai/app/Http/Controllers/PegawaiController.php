@@ -6,6 +6,8 @@ use App\Models\Pegawai;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Level;
+use App\Models\Divisi;
+use App\Models\Pegawai_Divisi;
 
 
 class PegawaiController extends Controller
@@ -61,6 +63,7 @@ class PegawaiController extends Controller
             'alamat' => 'required',
             'email' => 'required',
             'tanggal_lahir' => 'required',
+            'image' => 'required',
         ]);
 
         //fungsi eloquent untuk menambah data
@@ -72,6 +75,11 @@ class PegawaiController extends Controller
                 $pegawai->alamat = $request->get('alamat');
                 $pegawai->email = $request->get('email');
                 $pegawai->tanggal_lahir = $request->get('tanggal_lahir');
+                 if ($request->file('image')) {
+                    $image_name = $request->file('image')->store('images', 'public');
+                }
+
+                $pegawai->featured_image = $image_name;
                 $pegawai->save();
 
                 $level = new Level;
@@ -141,6 +149,16 @@ class PegawaiController extends Controller
                 $pegawai->alamat = $request->get('alamat');
                 $pegawai->email = $request->get('email');
                 $pegawai->tanggal_lahir = $request->get('tanggal_lahir');
+                if ($request->file('image') != null && $pegawai->featured_image && file_exists(storage_path('app/public/' . $pegawai->featured_image))) {
+                    Storage::delete(['public/'. $pegawai->featured_image]);
+                    $image_name = $request->file('image')->store('image', 'public');
+                } elseif ($request->file('image') != null) {
+                    $image_name = $request->file('image')->store('image', 'public');
+                }
+                else {
+                    $image_name = $pegawai->featured_image;
+                }
+                $pegawai->featured_image = $image_name;
                 $pegawai->save();
 
                 $level = new Level;
@@ -168,5 +186,16 @@ class PegawaiController extends Controller
         Pegawai::find($id)->delete();
         return redirect()->route('pegawai.index')
         -> with('success', 'Pegawai Berhasil Dihapus');
+    }
+
+    public function gaji($id){
+        $pegawai = Pegawai::find($id);
+        return view('pegawai.gaji', compact('pegawai'));
+
+        // $gaji= Pegawai_Divisi::with('divisi')
+        //     ->where('id', $id)
+        //     ->get();
+        // $Pegawai = Pegawai::find($id);
+        // return view('pegawai.gaji', ['Pegawai' =>$Pegawai]);
     }
 };

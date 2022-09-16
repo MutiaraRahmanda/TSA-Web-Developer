@@ -20,3 +20,5 @@ use Illuminate\Http\Request;
 // });
 
 Route::resource('pegawai', PegawaiController::class);
+Route::get('pegawai/gaji/{pegawai}', [PegawaiController::class, 'gaji'])->name('pegawai.showGaji');
+

@@ -21,13 +21,18 @@ class Pegawai extends Model
     'id',
     'nip',
     'nama',
+    'level',
     'jabatan',
     'alamat',
     'email',
     'tanggal_lahir',
+    'featured_image',
     ];
 
     public function level(){
         return $this->belongsTo(Level::class);
+    }
+    public function divisi(){
+        return $this->belongsTo(Pegawai_Divisi::class);
     }
 }
